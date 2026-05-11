@@ -247,7 +247,8 @@ VOID WINAPI sound5() {
 	waveOutClose(hWaveOut);
 }
 
-int main() {
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd) {
+
 	if (MessageBoxW(NULL, L"mpq3.0.exe, is very short and only runs for 2 minutes", L"mpq3.0.exe", MB_YESNO | MB_ICONEXCLAMATION) == IDNO)
 	{
 		ExitProcess(0);
@@ -296,4 +297,5 @@ int main() {
 		Sleep(30000);
 		Sleep(200);
 	}
+    return 0;
 }
